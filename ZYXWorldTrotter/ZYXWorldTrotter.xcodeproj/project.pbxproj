@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2756E4541CF848CA00AD782B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756E4531CF848CA00AD782B /* AppDelegate.swift */; };
+		2756E4591CF848CA00AD782B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2756E4571CF848CA00AD782B /* Main.storyboard */; };
+		2756E45B1CF848CA00AD782B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2756E45A1CF848CA00AD782B /* Assets.xcassets */; };
+		2756E45E1CF848CA00AD782B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2756E45C1CF848CA00AD782B /* LaunchScreen.storyboard */; };
+		2756E4691CF848CA00AD782B /* ZYXWorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756E4681CF848CA00AD782B /* ZYXWorldTrotterTests.swift */; };
+		2756E4741CF848CA00AD782B /* ZYXWorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756E4731CF848CA00AD782B /* ZYXWorldTrotterUITests.swift */; };
+		2756E4821CF855C200AD782B /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756E4811CF855C200AD782B /* ConversionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2756E4651CF848CA00AD782B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2756E4481CF848CA00AD782B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2756E44F1CF848CA00AD782B;
+			remoteInfo = ZYXWorldTrotter;
+		};
+		2756E4701CF848CA00AD782B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2756E4481CF848CA00AD782B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2756E44F1CF848CA00AD782B;
+			remoteInfo = ZYXWorldTrotter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2756E4501CF848CA00AD782B /* ZYXWorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYXWorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2756E4531CF848CA00AD782B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2756E4581CF848CA00AD782B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2756E45A1CF848CA00AD782B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2756E45D1CF848CA00AD782B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2756E45F1CF848CA00AD782B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2756E4641CF848CA00AD782B /* ZYXWorldTrotterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYXWorldTrotterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2756E4681CF848CA00AD782B /* ZYXWorldTrotterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYXWorldTrotterTests.swift; sourceTree = "<group>"; };
+		2756E46A1CF848CA00AD782B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2756E46F1CF848CA00AD782B /* ZYXWorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYXWorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2756E4731CF848CA00AD782B /* ZYXWorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYXWorldTrotterUITests.swift; sourceTree = "<group>"; };
+		2756E4751CF848CA00AD782B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2756E4811CF855C200AD782B /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2756E44D1CF848CA00AD782B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2756E4611CF848CA00AD782B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2756E46C1CF848CA00AD782B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2756E4471CF848CA00AD782B = {
+			isa = PBXGroup;
+			children = (
+				2756E4521CF848CA00AD782B /* ZYXWorldTrotter */,
+				2756E4671CF848CA00AD782B /* ZYXWorldTrotterTests */,
+				2756E4721CF848CA00AD782B /* ZYXWorldTrotterUITests */,
+				2756E4511CF848CA00AD782B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2756E4511CF848CA00AD782B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2756E4501CF848CA00AD782B /* ZYXWorldTrotter.app */,
+				2756E4641CF848CA00AD782B /* ZYXWorldTrotterTests.xctest */,
+				2756E46F1CF848CA00AD782B /* ZYXWorldTrotterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2756E4521CF848CA00AD782B /* ZYXWorldTrotter */ = {
+			isa = PBXGroup;
+			children = (
+				2756E4531CF848CA00AD782B /* AppDelegate.swift */,
+				2756E4811CF855C200AD782B /* ConversionViewController.swift */,
+				2756E4571CF848CA00AD782B /* Main.storyboard */,
+				2756E45A1CF848CA00AD782B /* Assets.xcassets */,
+				2756E45C1CF848CA00AD782B /* LaunchScreen.storyboard */,
+				2756E45F1CF848CA00AD782B /* Info.plist */,
+			);
+			path = ZYXWorldTrotter;
+			sourceTree = "<group>";
+		};
+		2756E4671CF848CA00AD782B /* ZYXWorldTrotterTests */ = {
+			isa = PBXGroup;
+			children = (
+				2756E4681CF848CA00AD782B /* ZYXWorldTrotterTests.swift */,
+				2756E46A1CF848CA00AD782B /* Info.plist */,
+			);
+			path = ZYXWorldTrotterTests;
+			sourceTree = "<group>";
+		};
+		2756E4721CF848CA00AD782B /* ZYXWorldTrotterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2756E4731CF848CA00AD782B /* ZYXWorldTrotterUITests.swift */,
+				2756E4751CF848CA00AD782B /* Info.plist */,
+			);
+			path = ZYXWorldTrotterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2756E44F1CF848CA00AD782B /* ZYXWorldTrotter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2756E4781CF848CA00AD782B /* Build configuration list for PBXNativeTarget "ZYXWorldTrotter" */;
+			buildPhases = (
+				2756E44C1CF848CA00AD782B /* Sources */,
+				2756E44D1CF848CA00AD782B /* Frameworks */,
+				2756E44E1CF848CA00AD782B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYXWorldTrotter;
+			productName = ZYXWorldTrotter;
+			productReference = 2756E4501CF848CA00AD782B /* ZYXWorldTrotter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2756E4631CF848CA00AD782B /* ZYXWorldTrotterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2756E47B1CF848CA00AD782B /* Build configuration list for PBXNativeTarget "ZYXWorldTrotterTests" */;
+			buildPhases = (
+				2756E4601CF848CA00AD782B /* Sources */,
+				2756E4611CF848CA00AD782B /* Frameworks */,
+				2756E4621CF848CA00AD782B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2756E4661CF848CA00AD782B /* PBXTargetDependency */,
+			);
+			name = ZYXWorldTrotterTests;
+			productName = ZYXWorldTrotterTests;
+			productReference = 2756E4641CF848CA00AD782B /* ZYXWorldTrotterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2756E46E1CF848CA00AD782B /* ZYXWorldTrotterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2756E47E1CF848CA00AD782B /* Build configuration list for PBXNativeTarget "ZYXWorldTrotterUITests" */;
+			buildPhases = (
+				2756E46B1CF848CA00AD782B /* Sources */,
+				2756E46C1CF848CA00AD782B /* Frameworks */,
+				2756E46D1CF848CA00AD782B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2756E4711CF848CA00AD782B /* PBXTargetDependency */,
+			);
+			name = ZYXWorldTrotterUITests;
+			productName = ZYXWorldTrotterUITests;
+			productReference = 2756E46F1CF848CA00AD782B /* ZYXWorldTrotterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2756E4481CF848CA00AD782B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "卓酉鑫";
+				TargetAttributes = {
+					2756E44F1CF848CA00AD782B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					2756E4631CF848CA00AD782B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2756E44F1CF848CA00AD782B;
+					};
+					2756E46E1CF848CA00AD782B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2756E44F1CF848CA00AD782B;
+					};
+				};
+			};
+			buildConfigurationList = 2756E44B1CF848CA00AD782B /* Build configuration list for PBXProject "ZYXWorldTrotter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2756E4471CF848CA00AD782B;
+			productRefGroup = 2756E4511CF848CA00AD782B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2756E44F1CF848CA00AD782B /* ZYXWorldTrotter */,
+				2756E4631CF848CA00AD782B /* ZYXWorldTrotterTests */,
+				2756E46E1CF848CA00AD782B /* ZYXWorldTrotterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2756E44E1CF848CA00AD782B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2756E45E1CF848CA00AD782B /* LaunchScreen.storyboard in Resources */,
+				2756E45B1CF848CA00AD782B /* Assets.xcassets in Resources */,
+				2756E4591CF848CA00AD782B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2756E4621CF848CA00AD782B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2756E46D1CF848CA00AD782B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2756E44C1CF848CA00AD782B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2756E4821CF855C200AD782B /* ConversionViewController.swift in Sources */,
+				2756E4541CF848CA00AD782B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2756E4601CF848CA00AD782B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2756E4691CF848CA00AD782B /* ZYXWorldTrotterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2756E46B1CF848CA00AD782B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2756E4741CF848CA00AD782B /* ZYXWorldTrotterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2756E4661CF848CA00AD782B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2756E44F1CF848CA00AD782B /* ZYXWorldTrotter */;
+			targetProxy = 2756E4651CF848CA00AD782B /* PBXContainerItemProxy */;
+		};
+		2756E4711CF848CA00AD782B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2756E44F1CF848CA00AD782B /* ZYXWorldTrotter */;
+			targetProxy = 2756E4701CF848CA00AD782B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2756E4571CF848CA00AD782B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2756E4581CF848CA00AD782B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2756E45C1CF848CA00AD782B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2756E45D1CF848CA00AD782B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2756E4761CF848CA00AD782B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2756E4771CF848CA00AD782B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2756E4791CF848CA00AD782B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZYXWorldTrotter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXWorldTrotter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2756E47A1CF848CA00AD782B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZYXWorldTrotter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXWorldTrotter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2756E47C1CF848CA00AD782B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZYXWorldTrotterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXWorldTrotterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYXWorldTrotter.app/ZYXWorldTrotter";
+			};
+			name = Debug;
+		};
+		2756E47D1CF848CA00AD782B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZYXWorldTrotterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXWorldTrotterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYXWorldTrotter.app/ZYXWorldTrotter";
+			};
+			name = Release;
+		};
+		2756E47F1CF848CA00AD782B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZYXWorldTrotterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXWorldTrotterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZYXWorldTrotter;
+			};
+			name = Debug;
+		};
+		2756E4801CF848CA00AD782B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZYXWorldTrotterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXWorldTrotterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZYXWorldTrotter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2756E44B1CF848CA00AD782B /* Build configuration list for PBXProject "ZYXWorldTrotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2756E4761CF848CA00AD782B /* Debug */,
+				2756E4771CF848CA00AD782B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2756E4781CF848CA00AD782B /* Build configuration list for PBXNativeTarget "ZYXWorldTrotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2756E4791CF848CA00AD782B /* Debug */,
+				2756E47A1CF848CA00AD782B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2756E47B1CF848CA00AD782B /* Build configuration list for PBXNativeTarget "ZYXWorldTrotterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2756E47C1CF848CA00AD782B /* Debug */,
+				2756E47D1CF848CA00AD782B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2756E47E1CF848CA00AD782B /* Build configuration list for PBXNativeTarget "ZYXWorldTrotterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2756E47F1CF848CA00AD782B /* Debug */,
+				2756E4801CF848CA00AD782B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2756E4481CF848CA00AD782B /* Project object */;
+}

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271FB7751CFC160B00C4E954 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271FB7741CFC160B00C4E954 /* MapKit.framework */; };
+		271FB7771CFC183D00C4E954 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271FB7761CFC183D00C4E954 /* MapViewController.swift */; };
+		271FB7791CFC309600C4E954 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271FB7781CFC309600C4E954 /* CustomViewController.swift */; };
 		2756E4541CF848CA00AD782B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756E4531CF848CA00AD782B /* AppDelegate.swift */; };
 		2756E4591CF848CA00AD782B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2756E4571CF848CA00AD782B /* Main.storyboard */; };
 		2756E45B1CF848CA00AD782B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2756E45A1CF848CA00AD782B /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271FB7741CFC160B00C4E954 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		271FB7761CFC183D00C4E954 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		271FB7781CFC309600C4E954 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		2756E4501CF848CA00AD782B /* ZYXWorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYXWorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2756E4531CF848CA00AD782B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2756E4581CF848CA00AD782B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271FB7751CFC160B00C4E954 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +84,7 @@
 		2756E4471CF848CA00AD782B = {
 			isa = PBXGroup;
 			children = (
+				271FB7741CFC160B00C4E954 /* MapKit.framework */,
 				2756E4521CF848CA00AD782B /* ZYXWorldTrotter */,
 				2756E4671CF848CA00AD782B /* ZYXWorldTrotterTests */,
 				2756E4721CF848CA00AD782B /* ZYXWorldTrotterUITests */,
@@ -99,6 +107,8 @@
 			children = (
 				2756E4531CF848CA00AD782B /* AppDelegate.swift */,
 				2756E4811CF855C200AD782B /* ConversionViewController.swift */,
+				271FB7761CFC183D00C4E954 /* MapViewController.swift */,
+				271FB7781CFC309600C4E954 /* CustomViewController.swift */,
 				2756E4571CF848CA00AD782B /* Main.storyboard */,
 				2756E45A1CF848CA00AD782B /* Assets.xcassets */,
 				2756E45C1CF848CA00AD782B /* LaunchScreen.storyboard */,
@@ -257,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2756E4821CF855C200AD782B /* ConversionViewController.swift in Sources */,
+				271FB7771CFC183D00C4E954 /* MapViewController.swift in Sources */,
 				2756E4541CF848CA00AD782B /* AppDelegate.swift in Sources */,
+				271FB7791CFC309600C4E954 /* CustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +494,7 @@
 				2756E47A1CF848CA00AD782B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2756E47B1CF848CA00AD782B /* Build configuration list for PBXNativeTarget "ZYXWorldTrotterTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +503,7 @@
 				2756E47D1CF848CA00AD782B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2756E47E1CF848CA00AD782B /* Build configuration list for PBXNativeTarget "ZYXWorldTrotterUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +512,7 @@
 				2756E4801CF848CA00AD782B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

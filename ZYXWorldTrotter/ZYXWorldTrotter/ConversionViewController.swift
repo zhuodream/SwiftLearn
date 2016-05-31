@@ -42,7 +42,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         print("ConversionViewController loaded its view.")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool)
+    {
         super.viewWillAppear(animated)
 
         let r = CGFloat.init(arc4random() % 255) / 255.0
@@ -54,10 +55,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func fahrenheitFieldEditingChanged(textField: UITextField)
     {
-        if let text = textField.text, value = Double(text) {
-            fahrenheitValue = value
+        if let text = textField.text, number = numberFormatter.numberFromString(text)
+        {
+            fahrenheitValue = number.doubleValue
         }
-        else {
+        else
+        {
             fahrenheitValue = nil
         }
     }
@@ -67,7 +70,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
     }
     
-    func updateCelsiusLabel() {
+    func updateCelsiusLabel()
+    {
         if let value = celsiusValue {
             celsiusLabel.text = numberFormatter.stringFromNumber(value)
         }
@@ -76,15 +80,18 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool
+    {
+        let currentLocale = NSLocale.currentLocale()
+        let decimalSeparator = currentLocale.objectForKey(NSLocaleDecimalSeparator) as! String
         
-        let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
-        let replacementTextHasDecimalSeparator = string.rangeOfString(".")
+        let existingTextHasDecimalSeparator = textField.text?.rangeOfString(decimalSeparator)
+        let replacementTextHasDecimalSeparator = string.rangeOfString(decimalSeparator)
         
         if string.characters.count > 1 {
             let str = string.substringWithRange(Range<String.Index>((replacementTextHasDecimalSeparator?.startIndex.advancedBy(1))!..<string.endIndex))
             
-            let againDecialRange = str.rangeOfString(".")
+            let againDecialRange = str.rangeOfString(decimalSeparator)
             
             if againDecialRange != nil {
                 return false

@@ -13,9 +13,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     var mapView: MKMapView!
     var locationManager: CLLocationManager!
+    var anns: [MKPointAnnotation] = []
+    var annIndex: Int = 0
     
     
-    override func loadView() {
+    override func loadView()
+    {
         mapView = MKMapView()
         
         view = mapView
@@ -23,7 +26,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         locationManager = CLLocationManager()
         
-        let segementedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+        let standardString = NSLocalizedString("Standard", comment: "Standard map view")
+        let satelliteString = NSLocalizedString("Satellite", comment: "Satellite map view")
+        let hyvridString = NSLocalizedString("Hybrid", comment: "Hybrid map view")
+        let segementedControl = UISegmentedControl(items: [standardString, satelliteString, hyvridString])
+        
         segementedControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         segementedControl.selectedSegmentIndex = 0
         
@@ -57,35 +64,81 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         leadingButtonConstraint.active = true
         trailingButtonConstraint.active = true
         
+        var ann = MKPointAnnotation()
+        var annLoc = CLLocationCoordinate2DMake(39.9, -75.9)
+        ann.coordinate = annLoc
+        ann.title = "Here I am"
+        ann.subtitle = "Ann0"
+        mapView.addAnnotation(ann)
+        anns.append(ann)
+        
+        ann = MKPointAnnotation()
+        annLoc = CLLocationCoordinate2DMake(39.7, -75.7)
+        ann.coordinate = annLoc
+        ann.title = "Here I am"
+        ann.subtitle = "Ann1"
+        mapView.addAnnotation(ann)
+        anns.append(ann)
+        
+        ann = MKPointAnnotation()
+        annLoc = CLLocationCoordinate2DMake(39.5, -75.5)
+        ann.coordinate = annLoc
+        ann.title = "Here I am"
+        ann.subtitle = "Ann2"
+        mapView.addAnnotation(ann)
+        anns.append(ann)
+        
+        let button = UIButton(type: .System)
+        button.backgroundColor = UIColor.grayColor()
+        button.setTitle("NextLoc", forState: UIControlState.Normal)
+        button.addTarget(self, action: #selector(buttonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints=false
+        self.view.addSubview(button)
+        let widthConstraint = button.widthAnchor.constraintEqualToAnchor(nil, constant: 100.0)
+        let heightConstraint = button.heightAnchor.constraintEqualToAnchor(nil, constant: 35.0)
+        let horizontalConstraint = button.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor)
+        let verticalConstraint = button.bottomAnchor.constraintEqualToAnchor(self.bottomLayoutGuide.topAnchor, constant: -28.0)
+        NSLayoutConstraint.activateConstraints([widthConstraint, heightConstraint, horizontalConstraint, verticalConstraint])
+        
     }
     
-    override func viewDidLoad() {
+    func buttonAction(sender: UIButton!)
+    {
+        mapView.showAnnotations([anns[annIndex]], animated: true)
+        annIndex = (annIndex + 1) % 3
+    }
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         print("MapViewController loaded its view.")
     }
     
-    func mapTypeChanged(segControl: UISegmentedControl) {
-        switch segControl.selectedSegmentIndex {
-        case 0:
-            mapView.mapType = .Standard
-        case 1:
-            mapView.mapType = .Hybrid
-        case 3:
-            mapView.mapType = .Satellite
-        default:
-            break
+    func mapTypeChanged(segControl: UISegmentedControl)
+    {
+        switch segControl.selectedSegmentIndex
+        {
+            case 0:
+                mapView.mapType = .Standard
+            case 1:
+                mapView.mapType = .Hybrid
+            case 3:
+                mapView.mapType = .Satellite
+            default:
+                break
         }
     }
     
-    func showLocButton(sender: UIButton!) {
+    func showLocButton(sender: UIButton!)
+    {
         locationManager.requestWhenInUseAuthorization()
         mapView.showsUserLocation = true
     }
     
-    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation)
+    {
         let zoomedIncurrentLocation = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 500, 500)
         mapView.setRegion(zoomedIncurrentLocation, animated: true)
-        print("aaaaaaaaaaaa")
     }
 }

@@ -17,6 +17,7 @@
 		2756E4691CF848CA00AD782B /* ZYXWorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756E4681CF848CA00AD782B /* ZYXWorldTrotterTests.swift */; };
 		2756E4741CF848CA00AD782B /* ZYXWorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756E4731CF848CA00AD782B /* ZYXWorldTrotterUITests.swift */; };
 		2756E4821CF855C200AD782B /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756E4811CF855C200AD782B /* ConversionViewController.swift */; };
+		27C4A6411CFDFA36009AC57A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27C4A6431CFDFA36009AC57A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,10 @@
 		2756E4731CF848CA00AD782B /* ZYXWorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYXWorldTrotterUITests.swift; sourceTree = "<group>"; };
 		2756E4751CF848CA00AD782B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2756E4811CF855C200AD782B /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		27C4A63D1CFDF760009AC57A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		27C4A63E1CFDF7BD009AC57A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		27C4A6421CFDFA36009AC57A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		27C4A6441CFDFA3A009AC57A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +118,7 @@
 				2756E45A1CF848CA00AD782B /* Assets.xcassets */,
 				2756E45C1CF848CA00AD782B /* LaunchScreen.storyboard */,
 				2756E45F1CF848CA00AD782B /* Info.plist */,
+				27C4A6431CFDFA36009AC57A /* Localizable.strings */,
 			);
 			path = ZYXWorldTrotter;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 				TargetAttributes = {
 					2756E44F1CF848CA00AD782B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 863XF2ER6H;
 					};
 					2756E4631CF848CA00AD782B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -221,6 +228,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 2756E4471CF848CA00AD782B;
 			productRefGroup = 2756E4511CF848CA00AD782B /* Products */;
@@ -240,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2756E45E1CF848CA00AD782B /* LaunchScreen.storyboard in Resources */,
+				27C4A6411CFDFA36009AC57A /* Localizable.strings in Resources */,
 				2756E45B1CF848CA00AD782B /* Assets.xcassets in Resources */,
 				2756E4591CF848CA00AD782B /* Main.storyboard in Resources */,
 			);
@@ -309,6 +318,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				2756E4581CF848CA00AD782B /* Base */,
+				27C4A63D1CFDF760009AC57A /* en */,
+				27C4A63E1CFDF7BD009AC57A /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -319,6 +330,15 @@
 				2756E45D1CF848CA00AD782B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		27C4A6431CFDFA36009AC57A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27C4A6421CFDFA36009AC57A /* en */,
+				27C4A6441CFDFA3A009AC57A /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -411,10 +431,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ZYXWorldTrotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXWorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -422,10 +446,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ZYXWorldTrotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXWorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

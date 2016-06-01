@@ -17,48 +17,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ch-XO-fjY">
-                                <rect key="frame" x="287" y="274" width="25" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1g-pB-Fj1">
+                                <rect key="frame" x="288" y="50" width="25" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEF-5W-MNm">
-                                <rect key="frame" x="257" y="89" width="86" height="30"/>
+                                <rect key="frame" x="257" y="105" width="86" height="30"/>
                                 <state key="normal" title="NextQustion"/>
                                 <connections>
                                     <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2I-eq-C8E"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1g-pB-Fj1">
-                                <rect key="frame" x="288" y="34" width="25" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ch-XO-fjY">
+                                <rect key="frame" x="287" y="290" width="25" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9F-Rx-ikY">
-                                <rect key="frame" x="254" y="311" width="93" height="30"/>
+                                <rect key="frame" x="254" y="327" width="93" height="30"/>
                                 <state key="normal" title="Show Answer"/>
                                 <connections>
                                     <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vjL-oR-LIQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sax-so-4I5">
+                                <rect key="frame" x="279" y="50" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CEF-5W-MNm" firstAttribute="top" secondItem="o1g-pB-Fj1" secondAttribute="bottom" constant="34" id="8a8-EV-kV4"/>
-                            <constraint firstItem="l9F-Rx-ikY" firstAttribute="centerX" secondItem="CEF-5W-MNm" secondAttribute="centerX" id="Fbb-cB-sGO"/>
-                            <constraint firstItem="o1g-pB-Fj1" firstAttribute="centerX" secondItem="CEF-5W-MNm" secondAttribute="centerX" id="Gjh-YO-Jo7"/>
                             <constraint firstItem="6Ch-XO-fjY" firstAttribute="top" secondItem="CEF-5W-MNm" secondAttribute="bottom" constant="155" id="Hcz-Nn-8H6"/>
+                            <constraint firstItem="sax-so-4I5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KbJ-tV-h6J"/>
                             <constraint firstItem="o1g-pB-Fj1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qii-uV-cuL"/>
-                            <constraint firstItem="o1g-pB-Fj1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="iD3-jI-9qJ"/>
+                            <constraint firstItem="l9F-Rx-ikY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ak5-o1-5TO"/>
+                            <constraint firstItem="6Ch-XO-fjY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eFm-eh-Snq"/>
+                            <constraint firstItem="o1g-pB-Fj1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="gsR-v4-2Ql"/>
+                            <constraint firstItem="CEF-5W-MNm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uNf-vX-kG7"/>
                             <constraint firstItem="l9F-Rx-ikY" firstAttribute="top" secondItem="6Ch-XO-fjY" secondAttribute="bottom" constant="16" id="vOV-Pr-hSg"/>
-                            <constraint firstItem="6Ch-XO-fjY" firstAttribute="centerX" secondItem="CEF-5W-MNm" secondAttribute="centerX" id="yqn-VB-7cI"/>
+                            <constraint firstItem="sax-so-4I5" firstAttribute="top" secondItem="o1g-pB-Fj1" secondAttribute="top" id="wd3-nf-iGh"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="answerLabel" destination="o1g-pB-Fj1" id="1Ny-yW-MRo"/>
-                        <outlet property="qustionLabel" destination="6Ch-XO-fjY" id="mJ8-mf-b6u"/>
+                        <outlet property="answerLabel" destination="6Ch-XO-fjY" id="xdw-H8-uaD"/>
+                        <outlet property="currentQuestionLabel" destination="o1g-pB-Fj1" id="gFe-vC-5dJ"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="Qii-uV-cuL" id="h1V-TE-vOz"/>
+                        <outlet property="nextQuestionLabel" destination="sax-so-4I5" id="5BN-AQ-LS4"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="KbJ-tV-h6J" id="Fi5-IX-b1s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

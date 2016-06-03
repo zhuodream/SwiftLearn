@@ -55,6 +55,7 @@ class TagsViewController: UITableViewController {
             handler: nil)
         alertController.addAction(cancelAction)
         
+        //alertController.view.setNeedsLayout()
         presentViewController(alertController,
             animated: true,
             completion: nil)

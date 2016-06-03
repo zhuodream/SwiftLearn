@@ -42,9 +42,9 @@ class PhotoStore
             
             if case let .Success(photos) = result
             {
-                let mainQueueContext = self.coreDataStack.mainQueueContext
-                mainQueueContext.performBlockAndWait({ 
-                    try! mainQueueContext.obtainPermanentIDsForObjects(photos)
+                let privateQueueContext = self.coreDataStack.privateQueueContext
+                privateQueueContext.performBlockAndWait({ 
+                    try! privateQueueContext.obtainPermanentIDsForObjects(photos)
                 })
                 
                 let objectIDs = photos.map { $0.objectID }
@@ -68,13 +68,12 @@ class PhotoStore
     
     func processRecentPhotosRequest(data data: NSData?, error: NSError?) -> PhotosResult
     {
-        guard let jsonData = data
-        else
+        guard let jsonData = data else
         {
             return .Failure(error!)
         }
 
-        return FlickrAPI.photosFromJSONData(jsonData, inContext: self.coreDataStack.mainQueueContext)
+        return FlickrAPI.photosFromJSONData(jsonData, inContext: self.coreDataStack.privateQueueContext)
     }
     
     func fetchImageForPhoto(photo: Photo, completion: (ImageResult) -> Void)

@@ -53,13 +53,22 @@ class TagsViewController: UITableViewController {
         if let index = selectedIndexPaths.indexOf(indexPath)
         {
             selectedIndexPaths.removeAtIndex(index)
+            photo.removeTagObject(tag)
         }
         else
         {
             selectedIndexPaths.append(indexPath)
+            photo.addTagObject(tag)
         }
         
         tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+        do {
+            try store.coreDataStack.saveChanges()
+        }
+        catch let error {
+            print("Core Data save failed: \(error)")
+        }
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -72,5 +81,48 @@ class TagsViewController: UITableViewController {
         {
             cell.accessoryType = .None
         }
+    }
+    
+    @IBAction func done(sender: AnyObject)
+    {
+        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func addNewTag(sender: AnyObject)
+    {
+        let alertController = UIAlertController(title: "Add Tag", message: nil, preferredStyle: .Alert)
+        
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "tag name"
+            textField.autocapitalizationType = .Words
+        }
+        
+        let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            
+            if let tagName = alertController.textFields?.first?.text
+            {
+                let context = self.store.coreDataStack.mainQueueContext
+                let newTag = NSEntityDescription.insertNewObjectForEntityForName("Tag", inManagedObjectContext: context)
+                newTag.setValue(tagName, forKey: "name")
+                
+                do {
+                    try self.store.coreDataStack.saveChanges()
+                }
+                catch let error {
+                    print("Core Data save failed: \(error)")
+                }
+                
+                self.updateTags()
+                self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+            }
+        }
+        
+        alertController.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        alertController.view.setNeedsLayout()
+        presentViewController(alertController, animated: true, completion: nil)
     }
 }

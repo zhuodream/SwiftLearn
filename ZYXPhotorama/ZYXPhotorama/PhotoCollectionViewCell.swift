@@ -17,6 +17,7 @@ class PhotoCollectionViewCell: UICollectionViewCell
     {
         if let imageToDisplay = image
         {
+            spinner.stopAnimating()
             imageView.image = imageToDisplay
         }
         else

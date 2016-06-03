@@ -65,7 +65,13 @@ struct FlickrAPI
     
     private static func photoFromJSONObject(json: [String : AnyObject], inContext context: NSManagedObjectContext) -> Photo?
     {
-        guard let photoID = json["id"] as? String, title = json["title"] as? String, dateString = json["dateTaken"] as? String, photoURLString = json["url_h"] as? String, url = NSURL(string: photoURLString), dateTaken = dateformatter.dateFromString(dateString)
+        guard let
+            photoID = json["id"] as? String,
+            title = json["title"] as? String,
+            dateString = json["datetaken"] as? String,
+            photoURLString = json["url_h"] as? String,
+            url = NSURL(string: photoURLString),
+            dateTaken = dateformatter.dateFromString(dateString)
         else
         {
             return nil
@@ -107,7 +113,10 @@ struct FlickrAPI
         do {
             let jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: [])
             
-            guard let jsonDictionary = jsonObject as? [NSObject:AnyObject], photos = jsonDictionary["photos"] as? [String:AnyObject], photosArray = photos["photo"] as? [[String:AnyObject]]
+            guard let
+                jsonDictionary = jsonObject as? [NSObject:AnyObject],
+                photos = jsonDictionary["photos"] as? [String:AnyObject],
+                photosArray = photos["photo"] as? [[String:AnyObject]]
             else
             {
                 return .Failure(FlickError.InvaildJSONData)

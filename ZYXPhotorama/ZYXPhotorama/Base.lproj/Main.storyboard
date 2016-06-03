@@ -5,7 +5,72 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Photos View Controller-->
+        <!--Tags-->
+        <scene sceneID="i1g-B1-1Zy">
+            <objects>
+                <tableViewController id="T4P-4L-dmK" customClass="TagsViewController" customModule="ZYXPhotorama" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nez-Lw-R2D">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="Eks-VE-5pg" style="IBUITableViewCellStyleDefault" id="fNF-vs-E9K">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fNF-vs-E9K" id="yqe-91-SVi">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eks-VE-5pg">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="T4P-4L-dmK" id="Nv5-x8-Lr0"/>
+                            <outlet property="delegate" destination="T4P-4L-dmK" id="yDS-Pf-ao1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tags" id="fjv-lg-fnn">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="X6h-sI-K3J">
+                            <connections>
+                                <action selector="done:" destination="T4P-4L-dmK" id="Imm-e7-LJx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5fz-wG-RBl">
+                            <connections>
+                                <action selector="addNewTag:" destination="T4P-4L-dmK" id="RUp-kh-V5Z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihH-SO-aL5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3153" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5WA-ir-WJT">
+            <objects>
+                <navigationController id="RAd-td-TLu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KS9-Qv-ZiI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T4P-4L-dmK" kind="relationship" relationship="rootViewController" id="OxH-xg-trz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cfv-rh-FWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2501" y="429"/>
+        </scene>
+        <!--Photorama-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="ZYXPhotorama" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,6 +84,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uce-Ha-lWE">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="2sJ-SB-ROg">
                                     <size key="itemSize" width="90" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -33,15 +99,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dnV-vy-EaD">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dnV-vy-EaD">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 </imageView>
-                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yiR-ea-bBl">
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="yiR-ea-bBl">
                                                     <rect key="frame" x="35" y="35" width="20" height="20"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="dnV-vy-EaD" secondAttribute="bottom" id="AWg-3j-ofw"/>
                                             <constraint firstItem="yiR-ea-bBl" firstAttribute="centerY" secondItem="3ab-xk-0Oc" secondAttribute="centerY" id="I4O-NF-zMp"/>
@@ -67,14 +134,14 @@
                             <constraint firstAttribute="trailing" secondItem="uce-Ha-lWE" secondAttribute="trailing" id="Ttt-0t-al8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2lj-wO-WtL"/>
+                    <navigationItem key="navigationItem" title="Photorama" id="2lj-wO-WtL"/>
                     <connections>
                         <outlet property="collectionView" destination="uce-Ha-lWE" id="9UX-Af-E19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="429"/>
+            <point key="canvasLocation" x="1038" y="555"/>
         </scene>
         <!--Photo Info View Controller-->
         <scene sceneID="Xe5-cP-Ss8">
@@ -84,7 +151,7 @@
                         <viewControllerLayoutGuide type="top" id="DhU-sF-Z6A"/>
                         <viewControllerLayoutGuide type="bottom" id="Qm0-xV-tc3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4mN-Yk-XWp" customClass="PhotoIn">
+                    <view key="view" contentMode="scaleToFill" id="4mN-Yk-XWp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -94,7 +161,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nj-Zc-YPl">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Tags" id="GST-Sl-XqC"/>
+                                    <barButtonItem title="Tags" id="GST-Sl-XqC">
+                                        <connections>
+                                            <segue destination="RAd-td-TLu" kind="presentation" identifier="ShowTags" id="SYO-Ta-Xqq"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -109,6 +180,9 @@
                             <constraint firstItem="QZs-ey-ODh" firstAttribute="leading" secondItem="4mN-Yk-XWp" secondAttribute="leading" id="pk5-Ye-vI7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="QZs-ey-ODh" id="01B-Vz-W1p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9c-e8-gEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,7 +204,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wna-6T-pW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411" y="429"/>
+            <point key="canvasLocation" x="411" y="564"/>
         </scene>
     </scenes>
 </document>
